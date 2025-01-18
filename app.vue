@@ -6,7 +6,9 @@ const handleInput = (e: unknown) => {
 };
 
 const search = () => {
-  window.location.href = `https://www.google.com/search?q=${text.value.replaceAll(" ", "+")}`;
+  window.location.href = encodeURI(
+    `https://4get.ch/web?s=${text.value.replaceAll(" ", "+")}`,
+  );
 };
 </script>
 
@@ -51,7 +53,7 @@ const search = () => {
             >
             <a
               href="https://www.youtube.com/watch?v=pSvH9vH60Ig&list=PLg9uYxuZf8x_A-vcqqyOFZu06WlhnypWj"
-              class="mb-4 text-2xl"
+              class="mb-4 text-2xl decoration-froly hover:underline"
               >cure dolly</a
             >
             <a
@@ -61,7 +63,7 @@ const search = () => {
             >
             <a
               href="https://community.wanikani.com/t/master-list-of-book-clubs/35283"
-              class="mb-4 text-2xl"
+              class="mb-4 text-2xl decoration-froly hover:underline"
               >books</a
             >
             <a
@@ -77,11 +79,16 @@ const search = () => {
               class="mb-4 text-2xl decoration-froly hover:underline"
               >love2d</a
             >
+            <a
+              href="https://wakatime.com/dashboard"
+              class="mb-4 text-2xl decoration-froly hover:underline"
+              >wakatime</a
+            >
           </div>
           <div class="flex flex-col">
             <h2 class="mb-5 text-2xl text-perfume">keyboard</h2>
             <a
-              href="https://www.wanikani.com/"
+              href="https://monkeytype.com/"
               class="mb-4 text-2xl decoration-froly hover:underline"
               >monkeytype</a
             >
@@ -107,6 +114,11 @@ const search = () => {
               href="https://fmhy.net/readingpiracyguide"
               class="mb-4 text-2xl decoration-froly hover:underline"
               >fmhy</a
+            >
+            <a
+              href="https://cobalt.tools"
+              class="mb-4 text-2xl decoration-froly hover:underline"
+              >cobalt</a
             >
           </div>
         </div>
