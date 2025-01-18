@@ -84,6 +84,11 @@ const search = () => {
               class="mb-4 text-2xl decoration-froly hover:underline"
               >wakatime</a
             >
+            <a
+              href="https://viewsourcecode.org/snaptoken/kilo/index.html"
+              class="mb-4 text-2xl decoration-froly hover:underline"
+              >diy text editor</a
+            >
           </div>
           <div class="flex flex-col">
             <h2 class="mb-5 text-2xl text-perfume">keyboard</h2>
