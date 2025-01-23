@@ -1,15 +1,19 @@
+<!-- eslint-disable no-undef -->
 <script setup lang="ts">
 const text = ref("");
+const selectedEngine = ref<"google" | "4get">("google");
 
 const handleInput = (e: unknown) => {
   text.value = (e as { target: { value: string } }).target.value;
 };
 
 const search = () => {
-  window.location.href = encodeURI(
-    // `https://4get.ch/web?s=${text.value.replaceAll(" ", "+")}`,
-    `https://google.com/search?q=${text.value.replaceAll(" ", "+")}`,
-  );
+  const engines = {
+    google: `https://google.com/search?q=${text.value.replaceAll(" ", "+")}`,
+    "4get": `https://4get.ch/web?s=${text.value.replaceAll(" ", "+")}`,
+  };
+
+  window.location.href = encodeURI(engines[selectedEngine.value]);
 };
 </script>
 
@@ -40,6 +44,13 @@ const search = () => {
               @input="handleInput"
               @keydown.enter="search"
             />
+            <select
+              v-model="selectedEngine"
+              class="text-md ml-4 cursor-pointer bg-transparent outline-none"
+            >
+              <option value="google">Google</option>
+              <option value="4get">4get</option>
+            </select>
           </div>
         </div>
         <div
