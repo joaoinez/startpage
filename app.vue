@@ -34,6 +34,7 @@ const sections = {
     },
     { href: "https://fmhy.net/readingpiracyguide", text: "fmhy" },
     { href: "https://cobalt.tools", text: "cobalt" },
+    { href: "https://annas-archive.org", text: "anna's archive" },
   ],
 };
 </script>
